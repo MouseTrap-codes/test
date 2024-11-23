@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Style for smaller screens (optional) */
+      @media (max-width: 576px) {
+            .table th, .table td {
+                font-size: 12px;
+            }
+        }
+    </style>
+   
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" class="table-responsive table-bordered">
+        <table class="table">
+            <thead style="background-color:#1c4484; color: white">
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Class</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone Number</th>
+                  <th scope="col">Instagram</th>
+                  <th scope="col">Linkedin</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+      </div>
+    
+</body>
+<script>
+   
+         
+  let jsonData = [
+ {
+     name: "Arjun Mehta",
+     class: "'25",
+     email: "arjun.mehta25@utexas.edu",
+     phoneNumber: "555-123-4567",
+     instagram: "@arjunmehta25",
+     linkedin: "linkedin.com/in/arjunmehta25"
+ },
+ {
+     name: "Mei Lin",
+     class: "'26",
+     email: "mei.lin26@utexas.edu",
+     phoneNumber: "555-234-5678",
+     instagram: "@meilin26",
+     linkedin: "linkedin.com/in/meilin26"
+ },
+ {
+     name: "Riya Patel",
+     class: "'27",
+     email: "riya.patel27@utexas.edu",
+     phoneNumber: "555-345-6789",
+     instagram: "@riyapatel27",
+     linkedin: "linkedin.com/in/riyapatel27"
+ },
+ {
+     name: "Kenji Tanaka",
+     class: "'28",
+     email: "kenji.tanaka28@utexas.edu",
+     phoneNumber: "555-456-7890",
+     instagram: "@kenjitanaka28",
+     linkedin: "linkedin.com/in/kenjitanaka28"
+ },
+ {
+     name: "Ananya Iyer",
+     class: "'25",
+     email: "ananya.iyer25@utexas.edu",
+     phoneNumber: "555-567-8901",
+     instagram: "@ananya.iyer25",
+     linkedin: "linkedin.com/in/ananya.iyer25"
+ },
+ {
+     name: "Siddharth Gupta",
+     class: "'26",
+     email: "siddharth.gupta26@utexas.edu",
+     phoneNumber: "555-678-9012",
+     instagram: "@siddharthgupta26",
+     linkedin: "linkedin.com/in/siddharthgupta26"
+ },
+ {
+     name: "Hana Kim",
+     class: "'27",
+     email: "hana.kim27@utexas.edu",
+     phoneNumber: "555-789-0123",
+     instagram: "@hanakim27",
+     linkedin: "linkedin.com/in/hanakim27"
+ },
+ {
+     name: "Vivaan Sharma",
+     class: "'28",
+     email: "vivaan.sharma28@utexas.edu",
+     phoneNumber: "555-890-1234",
+     instagram: "@vivaansharma28",
+     linkedin: "linkedin.com/in/vivaansharma28"
+ },
+ {
+     name: "Aisha Khan",
+     class: "'25",
+     email: "aisha.khan25@utexas.edu",
+     phoneNumber: "555-901-2345",
+     instagram: "@aishakhan25",
+     linkedin: "linkedin.com/in/aishakhan25"
+ },
+ {
+     name: "Jun Park",
+     class: "'26",
+     email: "jun.park26@utexas.edu",
+     phoneNumber: "555-012-3456",
+     instagram: "@junpark26",
+     linkedin: "linkedin.com/in/junpark26"
+ },
+ {
+     name: "Emma Walker",
+     class: "'27",
+     email: "emma.walker27@utexas.edu",
+     phoneNumber: "555-112-3344",
+     instagram: "@emmawalker27",
+     linkedin: "linkedin.com/in/emmawalker27"
+ }
+];
+
+  
+// Populate the table
+const tableBody = document.getElementById("table-body");
+
+jsonData.forEach(person => {
+const row = document.createElement("tr");
+row.innerHTML = `
+<td>${person.name}</td>
+<td>${person.class}</td>
+<td>${person.email}</td>
+<td>${person.phoneNumber}</td>
+<td>${person.instagram}</td>
+<td><a href="https://${person.linkedin}" target="_blank">${person.linkedin}</a></td>
+`;
+tableBody.appendChild(row);
+});
+</script>
+</html>
+
+
+
